@@ -57,7 +57,7 @@ RUN curl -o wkhtmltox.deb -SL http://download.gna.org/wkhtmltopdf/0.12/0.12.1/wk
 #apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false -o APT::AutoRemove::SuggestsImportant=false npm \
 
 # Add odoo user
-RUN adduser --uid 1000 --disabled-password --gecos "odoo" --shell=/bin/false odoo
+RUN adduser --uid 555 --disabled-password --gecos "odoo" --shell=/bin/false odoo
 
 # Create forlder structure.
 RUN /bin/bash -c "mkdir -p /opt/odoo/{odoo-server,enterprise_addons,additional_addons,data}" \

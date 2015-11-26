@@ -9,4 +9,4 @@ Odoo is using Postgres as db, to start Postgres container run:
 Before running container from this image make sure you have odoo source downloaded to folder on the host. Also change ownership to 555:555 (this is the ID of odoo user inside the container).
 
 An example of how to run it, (obviously the paths need to change). 
-`docker run -v /root/docker/source/odoo-server:/opt/odoo/odoo-server -v /root/docker/source/enterprise_addons:/opt/odoo/enterprise_addons -v /root/docker/source/data:/opt/odoo/data -v /root/docker/source/additional_addons:/opt/odoo/additional_addons -p 127.0.0.1:8080:8069 --name odoo --link db:db -t lumnus/odooee:v6'
+`docker run -v /root/docker/source/odoo-server:/opt/odoo/odoo-server -v /root/docker/source/enterprise_addons:/opt/odoo/enterprise_addons -v /root/docker/source/data:/opt/odoo/data -v /root/docker/source/additional_addons:/opt/odoo/additional_addons -p 127.0.0.1:8080:8069 --name odoo --link db:db -t lumnus/odooee:v6`

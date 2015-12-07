@@ -43,6 +43,8 @@ RUN apt-get update \
 # Install Python deps.
 RUN curl -o /tmp/requirements.txt -SL https://raw.githubusercontent.com/odoo/odoo/9.0/requirements.txt
 RUN pip install -r /tmp/requirements.txt
+# Install Pytong deps. for odoo 8.
+RUN pip install simplejson unittest2 pyinotify
 
 # Install wkhtmltopdf.
 RUN curl -o wkhtmltox.deb -SL http://download.gna.org/wkhtmltopdf/0.12/0.12.1/wkhtmltox-0.12.1_linux-trusty-amd64.deb \
